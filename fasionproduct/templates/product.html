@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="fw-bold text-center my-3">PRODUCTS</h1>
+<div class="container">
+    <div class="row">
+        {% for item in products %}
+        <div class="col md-3 my-5 d-flex justify-content-center" >
+            <div class="card"  style="width: 18rem;height: 32rem;">
+                    <img src="{{ item.image }}" height="300px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-secondary">{{ item.name }}</h5>
+                  <h6 class="card-title">{{ item.modl }}</h6>
+                  <p class="card-text">{{ item.price }}</p>
+                  <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+              </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
